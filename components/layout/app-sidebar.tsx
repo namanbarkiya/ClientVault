@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LayoutDashboard, User, Settings, LogOut, ChevronsUpDown, Moon, Sun, Monitor } from "lucide-react"
+import { LayoutDashboard, FolderOpen, LayoutTemplate, User, Settings, LogOut, ChevronsUpDown, Moon, Sun, Monitor, CreditCard } from "lucide-react"
 import { useTheme } from "next-themes"
 import { toast } from "sonner"
 
@@ -37,6 +37,9 @@ import {
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/projects", label: "Projects", icon: FolderOpen },
+  { href: "/templates", label: "Templates", icon: LayoutTemplate },
+  { href: "/billing", label: "Billing", icon: CreditCard },
   { href: "/profile", label: "Profile", icon: User },
   { href: "/settings", label: "Settings", icon: Settings },
 ]
@@ -70,11 +73,11 @@ export function AppSidebar() {
               render={
                 <Link href="/dashboard">
                   <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                    N
+                    CV
                   </div>
                   <div className="grid flex-1 text-left leading-tight">
-                    <span className="truncate font-semibold text-sm">Product</span>
-                    <span className="truncate text-xs text-muted-foreground">Workspace</span>
+                    <span className="truncate font-semibold text-sm">ClientVault</span>
+                    <span className="truncate text-xs text-muted-foreground">Content Collection</span>
                   </div>
                 </Link>
               }
